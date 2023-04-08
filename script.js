@@ -18,6 +18,8 @@ function nextGarden() {
 
     if (currentIndex < 2) {
         currentIndex++;
+    } else {
+        currentIndex=0;
     }
 
     console.log(currentIndex);
@@ -41,6 +43,8 @@ function previousGarden() {
 
     if (currentIndex > 0) {
         currentIndex--;
+    } else {
+        currentIndex=2;
     }
 
     document.getElementsByClassName("view-container")[0].innerHTML = images[currentIndex];
@@ -54,5 +58,5 @@ function previousGarden() {
 }
 
 function found() {
-    console.log("Found!!!");
+    $('#foundModal').modal('show');
 }

@@ -18,14 +18,14 @@
 }
 
 #button-left {
-    position: fixed;
+    position: absolute;
     left: 5px;
     top: 318px;
     z-index: 2;
 }
 
 #button-right {
-    position: fixed;
+    position: absolute;
     right: 5px;
     top: 318px;
     z-index: 2;
@@ -65,4 +65,8 @@ h2.headline-text {
 
 body {
     background-color: #e9d5be;
+}
+
+#winImage {
+    width: 100%;
 }
