@@ -10,14 +10,15 @@ var images = [
     '<img id="third-image" src="./images/8401710770_7e031f9658_k.jpg"/>'
 ]
 
-$('img.lazy').on('appear', () => {
-    if (loaded < 3) {
+function loadedCallback() {
+    if (loaded < 2) {
         loaded++;
     } else {
         document.getElementById("loading").classList.add("dis-none");
         loaded = 0;
+        clicked = false;
     }
-});
+}
 
 function nextGarden() {
     if (clicked) {
@@ -37,25 +38,21 @@ function nextGarden() {
     document.getElementsByClassName("view-container")[0].innerHTML = images[currentIndex];
 
     if (currentIndex == 0) {
-        $('img.lazy').on('load', () => {
-            if (loaded < 2) {
-                loaded++;
-            } else {
-                document.getElementById("loading").classList.add("dis-none");
-                loaded = 0;
-                console.log("Cleared");
+        setTimeout(() => {
+            let lazyElements = document.getElementsByClassName("lazy");
+            for (let i = 0; i < lazyElements.length; i++) {
+                lazyElements[i].onLoad = loadedCallback();
             }
+        }, 100);
 
-            console.log(loaded);
-        });
         document.getElementById("scroll").scrollTo(1100,0);
     } else {
         setTimeout(() => {
             document.getElementById("loading").classList.add("dis-none");
+
+            clicked = false;
         }, 1000);
     }
-
-    clicked = false;
 }
 
 function previousGarden() {
@@ -76,25 +73,21 @@ function previousGarden() {
     document.getElementsByClassName("view-container")[0].innerHTML = images[currentIndex];
 
     if (currentIndex == 0) {
-        $('img.lazy').on('load', () => {
-            if (loaded < 2) {
-                loaded++;
-            } else {
-                document.getElementById("loading").classList.add("dis-none");
-                loaded = 0;
-                console.log("Cleared");
+        setTimeout(() => {
+            let lazyElements = document.getElementsByClassName("lazy");
+            for (let i = 0; i < lazyElements.length; i++) {
+                lazyElements[i].onLoad = loadedCallback();
             }
+        }, 100);
 
-            console.log(loaded);
-        });
         document.getElementById("scroll").scrollTo(1100,0);
     } else {
         setTimeout(() => {
             document.getElementById("loading").classList.add("dis-none");
+
+            clicked = false;
         }, 1000);
     }
-
-    clicked = false;
 }
 
 function found() {
