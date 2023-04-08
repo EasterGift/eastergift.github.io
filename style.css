@@ -1,0 +1,49 @@
+#scroll {
+    height: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100%;
+}
+
+#scroll .view-container {
+    position: relative;
+    height: 100%;
+    vertical-align: top;
+}
+
+#scroll .view-container img {
+    height: 100%;
+    vertical-align: top;
+    z-index: -1;
+}
+
+#button-left {
+    position: fixed;
+    left: 5px;
+    top: 50vh;
+    z-index: 2;
+}
+
+#button-right {
+    position: fixed;
+    right: 5px;
+    top: 50vh;
+    z-index: 2;
+}
+
+#gift {
+    position: absolute;
+    height: 4% !important;
+    width: auto;
+    top: 57vh;
+    left: 20.5vh;
+    z-index: 0 !important;
+}
+
+#first-image-alpha {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1 !important;
+    pointer-events: none;
+}
