@@ -2,7 +2,7 @@ var currentIndex = 1;
 var clicked = false;
 
 var images = [
-    '<img id="first-image-alpha" class="bg-colored" src="./images/44788279211_2e231bd959_k.png" loading="lazy" decoding="async"/>\n'+
+    '<img id="first-image-alpha" src="./images/44788279211_2e231bd959_k.png" loading="lazy" decoding="async"/>\n'+
     '<img id="gift" src="./images/IMG_20230408_150250529.png" loading="lazy" decoding="async" onclick="found()"/>\n'+
     '<img id="first-image" src="./images/44788279211_2e231bd959_k.jpg" loading="lazy" decoding="async"/>\n',
     '<img id="second-image" src="./images/16529177121_fa5daa3403_b.jpg"/>',
@@ -16,6 +16,8 @@ function nextGarden() {
         clicked = true;
     }
 
+    document.getElementById("loading").classList.remove("dis-none");
+
     if (currentIndex < 2) {
         currentIndex++;
     } else {
@@ -26,10 +28,11 @@ function nextGarden() {
 
     if (currentIndex == 0) {
         document.getElementById("scroll").scrollTo(1100,0);
-        setTimeout(() => {
-            document.getElementById("first-image-alpha").classList.remove("bg-colored");
-        }, 1000);
     }
+
+    setTimeout(() => {
+        document.getElementById("loading").classList.add("dis-none");
+    }, 1000);
 
     clicked = false;
 }
@@ -41,6 +44,8 @@ function previousGarden() {
         clicked = true;
     }
 
+    document.getElementById("loading").classList.remove("dis-none");
+
     if (currentIndex > 0) {
         currentIndex--;
     } else {
@@ -51,10 +56,11 @@ function previousGarden() {
 
     if (currentIndex == 0) {
         document.getElementById("scroll").scrollTo(1100,0);
-        setTimeout(() => {
-            document.getElementById("first-image-alpha").classList.remove("bg-colored");
-        }, 1000);
     }
+
+    setTimeout(() => {
+        document.getElementById("loading").classList.add("dis-none");
+    }, 1000);
 
     clicked = false;
 }
