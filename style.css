@@ -70,3 +70,7 @@ body {
 #winImage {
     width: 100%;
 }
+
+.bg-colored {
+    background-color: whitesmoke;
+}
