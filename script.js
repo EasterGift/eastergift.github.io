@@ -43,7 +43,10 @@ function nextGarden() {
             } else {
                 document.getElementById("loading").classList.add("dis-none");
                 loaded = 0;
+                console.log("Cleared");
             }
+
+            console.log(loaded);
         });
         document.getElementById("scroll").scrollTo(1100,0);
     } else {
@@ -79,7 +82,10 @@ function previousGarden() {
             } else {
                 document.getElementById("loading").classList.add("dis-none");
                 loaded = 0;
+                console.log("Cleared");
             }
+
+            console.log(loaded);
         });
         document.getElementById("scroll").scrollTo(1100,0);
     } else {
