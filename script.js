@@ -1,13 +1,23 @@
 var currentIndex = 1;
 var clicked = false;
+var loaded = 0;
 
 var images = [
-    '<img id="first-image-alpha" src="./images/44788279211_2e231bd959_k.png" loading="lazy" decoding="async"/>\n'+
-    '<img id="gift" src="./images/IMG_20230408_150250529.png" loading="lazy" decoding="async" onclick="found()"/>\n'+
-    '<img id="first-image" src="./images/44788279211_2e231bd959_k.jpg" loading="lazy" decoding="async"/>\n',
+    '<img id="first-image-alpha" class="lazy" src="./images/44788279211_2e231bd959_k.png" loading="lazy" decoding="async"/>\n'+
+    '<img id="gift" class="lazy" src="./images/IMG_20230408_150250529.png" loading="lazy" decoding="async" onclick="found()"/>\n'+
+    '<img id="first-image" class="lazy" src="./images/44788279211_2e231bd959_k.jpg" loading="lazy" decoding="async"/>\n',
     '<img id="second-image" src="./images/16529177121_fa5daa3403_b.jpg"/>',
     '<img id="third-image" src="./images/8401710770_7e031f9658_k.jpg"/>'
 ]
+
+$('img.lazy').on('appear', () => {
+    if (loaded < 3) {
+        loaded++;
+    } else {
+        document.getElementById("loading").classList.add("dis-none");
+        loaded = 0;
+    }
+});
 
 function nextGarden() {
     if (clicked) {
@@ -27,12 +37,20 @@ function nextGarden() {
     document.getElementsByClassName("view-container")[0].innerHTML = images[currentIndex];
 
     if (currentIndex == 0) {
+        $('img.lazy').on('load', () => {
+            if (loaded < 2) {
+                loaded++;
+            } else {
+                document.getElementById("loading").classList.add("dis-none");
+                loaded = 0;
+            }
+        });
         document.getElementById("scroll").scrollTo(1100,0);
+    } else {
+        setTimeout(() => {
+            document.getElementById("loading").classList.add("dis-none");
+        }, 1000);
     }
-
-    setTimeout(() => {
-        document.getElementById("loading").classList.add("dis-none");
-    }, 1000);
 
     clicked = false;
 }
@@ -55,12 +73,20 @@ function previousGarden() {
     document.getElementsByClassName("view-container")[0].innerHTML = images[currentIndex];
 
     if (currentIndex == 0) {
+        $('img.lazy').on('load', () => {
+            if (loaded < 2) {
+                loaded++;
+            } else {
+                document.getElementById("loading").classList.add("dis-none");
+                loaded = 0;
+            }
+        });
         document.getElementById("scroll").scrollTo(1100,0);
+    } else {
+        setTimeout(() => {
+            document.getElementById("loading").classList.add("dis-none");
+        }, 1000);
     }
-
-    setTimeout(() => {
-        document.getElementById("loading").classList.add("dis-none");
-    }, 1000);
 
     clicked = false;
 }
