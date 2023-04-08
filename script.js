@@ -26,7 +26,7 @@ function nextGarden() {
 
     if (currentIndex == 0) {
         //ToDo: Scroll to position
-        document.getElementById("scroll").scrollLeft = 200;
+        document.getElementById("scroll").scrollLeft = 1100;
     }
 
     clicked = false;
@@ -47,9 +47,9 @@ function previousGarden() {
 
     if (currentIndex == 0) {
         //ToDo: Scroll to position
-        document.getElementById("scroll").scrollLeft = 200;
+        document.getElementById("scroll").scrollLeft = 1100;
     }
-    
+
     clicked = false;
 }
 
