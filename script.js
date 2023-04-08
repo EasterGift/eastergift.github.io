@@ -14,7 +14,9 @@ function loadedCallback() {
     if (loaded < 2) {
         loaded++;
     } else {
-        document.getElementById("loading").classList.add("dis-none");
+        setTimeout(() => {
+            document.getElementById("loading").classList.add("dis-none");
+        }, 200);
         loaded = 0;
         clicked = false;
     }
