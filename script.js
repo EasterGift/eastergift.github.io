@@ -72,3 +72,7 @@ function toIntro2() {
 function toIntro3() {
     $('#intro3').modal('show');
 }
+
+function sendMessage() {
+    window.open("sms://&body=encodeURIComponent('Ich habe es geschafft. :)'),'_blank'");
+}
