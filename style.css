@@ -1,5 +1,5 @@
 #scroll {
-    height: 100%;
+    height: 568px;
     overflow-x: scroll;
     white-space: nowrap;
     width: 100%;
@@ -7,12 +7,12 @@
 
 #scroll .view-container {
     position: relative;
-    height: 100%;
+    height: 568px;
     vertical-align: top;
 }
 
 #scroll .view-container img {
-    height: 100%;
+    height: 568px;
     vertical-align: top;
     z-index: -1;
 }
@@ -20,14 +20,14 @@
 #button-left {
     position: fixed;
     left: 5px;
-    top: 50vh;
+    top: 318px;
     z-index: 2;
 }
 
 #button-right {
     position: fixed;
     right: 5px;
-    top: 50vh;
+    top: 318px;
     z-index: 2;
 }
 
@@ -35,8 +35,8 @@
     position: absolute;
     height: 4% !important;
     width: auto;
-    top: 52vh;
-    left: 19vh;
+    top: 320px;
+    left: 115px;
     z-index: 0 !important;
 }
 
@@ -46,4 +46,23 @@
     left: 0;
     z-index: 1 !important;
     pointer-events: none;
+}
+
+#headline {
+    background-color: #fde482;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h2.headline-text {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    color: #ce9d8e;
+    text-align: center;
+}
+
+body {
+    background-color: #e9d5be;
 }

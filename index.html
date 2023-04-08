@@ -19,25 +19,28 @@
         <script src="./script.js"></script>
     </head>
     <body>
+        <div id="headline">
+            <h2 class="headline-text">Ostergeschenk Suche :)</h2>
+        </div>
         <div id="scroll">
             <div class="view-container">
                 <img id="first-image-alpha" src="./images/44788279211_2e231bd959_k.png"/>
                 <img id="gift" src="./images/IMG_20230408_150250529.png" onclick="found()"/>
                 <img id="first-image" src="./images/44788279211_2e231bd959_k.jpg"/>
             </div>
+            <script>
+                document.getElementsByClassName("view-container")[0].innerHTML = images[currentIndex];
+            </script>
+            <button type="button" id="button-left" class="btn btn-light" onclick="previousGarden()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                </svg>
+            </button>
+            <button type="button" id="button-right" class="btn btn-light" onclick="nextGarden()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+            </button>
         </div>
-        <script>
-            document.getElementsByClassName("view-container")[0].innerHTML = images[currentIndex];
-        </script>
-        <button type="button" id="button-left" class="btn btn-primary" onclick="previousGarden()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-            </svg>
-        </button>
-        <button type="button" id="button-right" class="btn btn-primary" onclick="nextGarden()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-            </svg>
-        </button>
     </body>
 </html>
