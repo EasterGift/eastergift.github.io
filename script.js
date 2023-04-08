@@ -28,7 +28,8 @@ function nextGarden() {
 
     if (currentIndex == 0) {
         //ToDo: Scroll to position
-        $('#scroll').scrollLeft(1100);
+        //$('#scroll').scrollLeft(1100);
+        document.getElementById("scroll").scrollTo(1100,0);
         // document.getElementById("scroll").scrollLeft = 1100;
         // setTimeout(() => {
         //     document.getElementById("scroll").scrollLeft = 1100;
@@ -55,7 +56,8 @@ function previousGarden() {
 
     if (currentIndex == 0) {
         //ToDo: Scroll to position
-        $('#scroll').scrollLeft(1100);
+        //$('#scroll').scrollLeft(1100);
+        document.getElementById("scroll").scrollTo(1100,0);
         // document.getElementById("scroll").scrollLeft = 1100;
         // setTimeout(() => {
         //     document.getElementById("scroll").scrollLeft = 1100;
