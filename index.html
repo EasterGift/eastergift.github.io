@@ -24,9 +24,9 @@
         </div>
         <div id="scroll">
             <div class="view-container">
-                <img id="first-image-alpha" src="./images/44788279211_2e231bd959_k.png"/>
-                <img id="gift" src="./images/IMG_20230408_150250529.png" onclick="found()"/>
-                <img id="first-image" src="./images/44788279211_2e231bd959_k.jpg"/>
+                <img id="first-image-alpha" src="./images/44788279211_2e231bd959_k.png" loading="lazy" decoding="async"/>
+                <img id="gift" src="./images/IMG_20230408_150250529.png" loading="lazy" decoding="async" onclick="found()"/>
+                <img id="first-image" src="./images/44788279211_2e231bd959_k.jpg" loading="lazy" decoding="async"/>
             </div>
             <script>
                 document.getElementsByClassName("view-container")[0].innerHTML = images[currentIndex];
@@ -69,5 +69,88 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="intro1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="exampleModalLongTitle">So kannst du spielen. :)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mt-1">
+                            Das ist deine ganz persönliche Suche nach deinem Ostergeschenk. Klicke dich durch die Gärten und suche dein Geschenk. :)
+                        </div>
+                    </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Überspringen</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="toIntro2()">Weiter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="intro2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="exampleModalLongTitle">So kannst du spielen. :)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <div class="mb-1">
+                                <button type="button" class="btn btn-light" onclick="previousGarden()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                    </svg>
+                                </button>
+                                <button type="button" class="btn btn-light" onclick="nextGarden()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="mt-1">
+                                Tippe auf die Pfeiltasten um die Gärten zu wechseln.
+                            </div>
+                        </div>
+                    </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="toIntro1()">Zurück</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="toIntro3()">Weiter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="intro3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="exampleModalLongTitle">So kannst du spielen. :)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mt-1">
+                            Wische nach links und rechts um dich umzusehen. Viel Spaß bei der Suche. :)
+                        </div>
+                    </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="toIntro2()">Zurück</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            toIntro1();
+        </script>
     </body>
 </html>
