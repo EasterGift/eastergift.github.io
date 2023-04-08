@@ -30,7 +30,9 @@ function nextGarden() {
         //ToDo: Scroll to position
         document.getElementById("scroll").scrollLeft = 1100;
         document.getElementById("scroll").scrollLeft = 1100;
-        document.getElementById("scroll").scrollLeft = 1100;
+        setTimeout(() => {
+            document.getElementById("scroll").scrollLeft = 1100;
+        }, 100);
     }
 
     clicked = false;
@@ -55,7 +57,9 @@ function previousGarden() {
         //ToDo: Scroll to position
         document.getElementById("scroll").scrollLeft = 1100;
         document.getElementById("scroll").scrollLeft = 1100;
-        document.getElementById("scroll").scrollLeft = 1100;
+        setTimeout(() => {
+            document.getElementById("scroll").scrollLeft = 1100;
+        }, 100);
     }
 
     clicked = false;
