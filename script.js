@@ -95,5 +95,5 @@ function toIntro3() {
 }
 
 function sendMessage() {
-    window.open("sms://");
+    window.open("iMessage://");
 }
