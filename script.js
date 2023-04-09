@@ -95,5 +95,5 @@ function toIntro3() {
 }
 
 function sendMessage() {
-    window.open("sms://+49152/&body=encodeURIComponent('Ich habe es geschafft. :)'),'_blank'");
+    window.open("sms://");
 }
